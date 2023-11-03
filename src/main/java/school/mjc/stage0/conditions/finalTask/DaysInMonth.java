@@ -24,16 +24,15 @@ public class DaysInMonth {
                 break;
 
             case(2):
-                if ((year % 4 == 0) && (year % 100 != 0) && (year % 400 == 0)) {
-                    System.out.println(28);
-                } else {
+                if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
                     System.out.println(29);
+                } else {
+                    System.out.println(28);
                 }
                 break;
 
             default:
                 System.out.println("invalid date");
-                break;
         }
     }
 }
